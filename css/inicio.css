@@ -5,7 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url("../img/mars_planet.jpg"); 
+  background-image: url("../img/starship_mars.jpg"); 
   background-size: cover;            
   background-position: center;      
   background-repeat: no-repeat;       
@@ -33,7 +33,7 @@ h1 {
 p {
   font-size: 1.5rem;
   word-spacing: -0.85rem;
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
 
 .btn {
@@ -44,7 +44,7 @@ p {
   color: #fff;
   background: linear-gradient(45deg, #ff416c, #ff4b2b);
   border: none;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   cursor: pointer;
   text-decoration: none;
   transition: 0.3s;
@@ -158,4 +158,33 @@ p {
   z-index: 10;
   pointer-events: none;
   user-select: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 2rem;
+    overflow: auto;        
+  }
+
+  h1 {
+    font-size: 4rem;       
+    margin: 1rem 0;
+    text-shadow: 0 0 14px rgba(0,255,255,.6);
+  }
+
+  p {
+    font-size: 1rem;
+    word-spacing: normal;
+    padding: 0 1rem;
+    opacity: 0.9;
+    line-height: 1.8;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 16px;
+    margin-top: 1rem;
+    width: 80%;
+    max-width: 320px;
+  }
 }
