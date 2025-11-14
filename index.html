@@ -1,31 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Error 404</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Error 404 - Página No Encontrada</title>
+    <link rel="stylesheet" href="css/inicio.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="favicon/manifest.json" />
+    <link rel="license" href="./license" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <canvas id="main"></canvas>
-    <script type="text/javascript" src="js/Entity.js"></script>
-    <script type="text/javascript" src="js/Player.js"></script>
-    <script type="text/javascript" src="js/Alien.js"></script>
-    <script type="text/javascript" src="js/Shot.js"></script>
-    <script type="text/javascript" src="js/Game.js"></script>
-    <script type="text/javascript" src="js/Render2D.js"></script>
-    <script type="text/javascript" src="js/DeltaTime.js"></script>
-    <script type="text/javascript" src="js/Keyboard.js"></script>
-    <script type="text/javascript" src="js/EventDispatcher.js"></script>
-    <script type="text/javascript">
-      "use strict";
-      window.addEventListener("load", () => new Game("main"));
-    </script>
+    <div class="container">
+      <h1>404</h1>
+      <p>DEFEAT ERROR 404 TO RESTORE CONTACT WITH EARTH</p>
+      <a href="404.html" class="btn">
+        <span class="glitch" data-text="REGRESAR A LA TIERRA"
+          >RETURN TO EARTH</span
+        >
+      </a>
+    </div>
+    <img
+      src="https://ik.imagekit.io/aitoroa/UDIT/astronaut.png?updatedAt=1744720013164"
+      alt="Astronauta flotando"
+      class="astronauta"
+    />
   </body>
 </html>
