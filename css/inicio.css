@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+}
+
+h1 {
+  font-size: 8rem;
+  margin: 2.5rem;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+  animation: glow 1.5s infinite alternate;
+}
+
+p {
+  font-size: 1.5rem;
+  word-spacing: -0.85rem;
+  opacity: 0.8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 10px rgba(255, 65, 108, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 65, 108, 0.8), 0 0 40px rgba(255, 75, 43, 0.6);
+  filter: brightness(1.1);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  }
+  to {
+    text-shadow: 0 0 30px rgba(0, 255, 255, 1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(255, 65, 108, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 65, 108, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(255, 65, 108, 0.7);
+  }
+}
+
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #ff4b2b;
+  clip: rect(0, 0, 0, 0);
+}
+
+.glitch::before {
+  animation: glitchTop 2s infinite linear;
+  color: #ff416c;
+}
+
+.glitch::after {
+  animation: glitchBottom 2s infinite linear;
+  color: #00fff7;
+}
+
+@keyframes glitchTop {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  10% {
+    clip: rect(0, 9999px, 5px, 0);
+    transform: translate(-2px, -2px);
+  }
+  20% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  30% {
+    clip: rect(0, 9999px, 5px, 0);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+}
+
+@keyframes glitchBottom {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  10% {
+    clip: rect(5px, 9999px, 10px, 0);
+    transform: translate(2px, 2px);
+  }
+  20% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  30% {
+    clip: rect(5px, 9999px, 10px, 0);
+    transform: translate(-2px, 2px);
+  }
+  100% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+}
+.astronauta {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 60vh;
+  max-height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  user-select: none;
+}
