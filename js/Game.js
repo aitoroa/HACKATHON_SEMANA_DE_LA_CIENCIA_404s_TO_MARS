@@ -134,18 +134,21 @@ class Game {
     switch (this.#status) {
       case Game.Status.CONTINUE:
         this.#renderer.menu(
-          "You are death, but you have more lives.",
-          "Press <ENTER> to continue the game..."
+          "You are dead, but you have one more life.",
+          "Press <ENTER> to try one last time. Good luck!"
         );
         break;
       case Game.Status.GAME_OVER:
-        this.#renderer.menu("404", "Press <ENTER> to start a new game...");
+        this.#renderer.menu(
+          "The 404 error has won. Game Over.",
+          "Press <ENTER> to repair your starship, reload all weapons and start a new game..."
+        );
         break;
 
       case Game.Status.WIN:
         this.#renderer.menu(
           "Congratulations! You defeated the invasion!",
-          "Press <ENTER> to start new level..."
+          "Press <ENTER> to set course for Earth..."
         );
         break;
     }
