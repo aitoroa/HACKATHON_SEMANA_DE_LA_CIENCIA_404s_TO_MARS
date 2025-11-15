@@ -140,15 +140,15 @@ class Game {
         break;
       case Game.Status.GAME_OVER:
         this.#renderer.menu(
-          "The 404 error has won. Game Over.",
+          "The 404 error has won. Signal lost. Game Over.",
           "Press <ENTER> to repair your starship, reload all weapons and start a new game..."
         );
         break;
 
       case Game.Status.WIN:
         this.#renderer.menu(
-          "Congratulations! You defeated the invasion!",
-          "Press <ENTER> to set course for Earth..."
+          "Congratulations! You defeated the invasion and the signal has been restored!",
+          "Press <ENTER> to set course for Mars..."
         );
         break;
     }
