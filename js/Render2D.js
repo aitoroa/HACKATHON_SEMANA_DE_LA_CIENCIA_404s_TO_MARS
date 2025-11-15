@@ -137,30 +137,46 @@ class Render2D {
   menu(title, subtitle) {
     this.#drawOverlayBackground();
 
-    if (title && title.toString().includes("404")) {
-      this.#draw404PixelArt();
-    }
+    // if (title && title.toString().includes("404")) {
+    //   this.#draw404PixelArt();
+    // }
 
     this.#ctx.save();
     this.#ctx.fillStyle = "white";
     this.#ctx.textBaseline = "middle";
 
-    // Título
-    this.#ctx.font = "bold 30px monospace";
-    const titleWidth = this.#ctx.measureText(title).width;
-    this.#ctx.fillText(
-      title,
-      (this.#canvas.width - titleWidth) / 2,
-      this.#canvas.height / 2 + 40
-    );
+    const maxWidth = this.#canvas.width - 40;
+    const wrapText = (text, fontSize, yStart) => {
+      this.#ctx.font = `bold ${fontSize}px monospace`;
+      const words = text.split(" ");
+      let line = "";
+      let y = yStart;
+      for (let i = 0; i < words.length; i++) {
+        const testLine = line + words[i] + " ";
+        const testWidth = this.#ctx.measureText(testLine).width;
+        if (testWidth > maxWidth && i > 0) {
+          this.#ctx.fillText(
+            line,
+            (this.#canvas.width - this.#ctx.measureText(line).width) / 2,
+            y
+          );
+          line = words[i] + " ";
+          y += fontSize + 10;
+        } else {
+          line = testLine;
+        }
+      }
+      this.#ctx.fillText(
+        line,
+        (this.#canvas.width - this.#ctx.measureText(line).width) / 2,
+        y
+      );
+      return y + fontSize + 20;
+    };
 
-    this.#ctx.font = "bold 20px monospace";
-    const subtitleWidth = this.#ctx.measureText(subtitle).width;
-    this.#ctx.fillText(
-      subtitle,
-      (this.#canvas.width - subtitleWidth) / 2,
-      this.#canvas.height / 2 + 80
-    );
+    let y = this.#canvas.height / 2 - 40;
+    y = wrapText(title, 28, y);
+    wrapText(subtitle, 20, y);
 
     this.#ctx.restore();
   }
