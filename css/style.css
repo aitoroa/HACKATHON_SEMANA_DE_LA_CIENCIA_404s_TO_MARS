@@ -1,7 +1,9 @@
 body {
   background: black;
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,4 +11,8 @@ body {
 
 canvas {
   display: block;
+  height: 100vh;
+  height: 100svh;
+  width: auto;
+  max-width: none;
 }
