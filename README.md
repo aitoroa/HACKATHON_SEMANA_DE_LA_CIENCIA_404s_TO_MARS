@@ -23,8 +23,10 @@ Proyecto web desarrollado para el concurso Hackathon de la Semana de la Ciencia.
 
 ## Instalación y uso
 
-# Clonar el repositorio
+Clonar el repositorio:
 
+```bash
 git clone https://github.com/aitoroa/HACKATHON_SEMANA_DE_LA_CIENCIA_404s_TO_MARS
+```
 
-# Abrir el archivo index.html en el navegador
+Abrir el archivo index.html en el navegador.
