@@ -37,9 +37,98 @@
         DEFEAT ERROR 404 TO REPAIR THE SYSTEM AND RECOVER THE ROUTE TO MARS
         BEFORE TIME RUNS OUT
       </p>
-      <a href="404.html" class="btn">
+      <a id="reboot-btn" href="404.html" class="btn">
         <span class="glitch" data-text="REINICIAR SISTEMA">REBOOT SYSTEM</span>
       </a>
+      <div id="trivia-overlay" aria-hidden="true">
+        <div
+          class="trivia-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="trivia-title"
+          tabindex="-1"
+        >
+          <button class="trivia-close" aria-label="Close trivia">
+            &times;
+          </button>
+          <h2 id="trivia-title">TRIVIA: RESTORE THE ROUTE TO MARS</h2>
+
+          <form id="trivia-form">
+            <fieldset>
+              <legend>
+                1) Which geological feature on Mars is considered the largest
+                mountain and volcano in the Solar System?
+              </legend>
+              <label
+                ><input type="radio" name="q1" value="Arsia Mons" /> Arsia
+                Mons</label
+              >
+              <label
+                ><input type="radio" name="q1" value="Olympus Mons" /> Olympus
+                Mons</label
+              >
+              <label
+                ><input type="radio" name="q1" value="Tharsis Tholus" /> Tharsis
+                Tholus</label
+              >
+            </fieldset>
+
+            <fieldset>
+              <legend>
+                2) Which mission was the first to successfully land and transmit
+                images from the surface of Mars?
+              </legend>
+              <label
+                ><input type="radio" name="q2" value="Viking 1" /> Viking
+                1</label
+              >
+              <label
+                ><input type="radio" name="q2" value="Mariner 9" /> Mariner
+                9</label
+              >
+              <label
+                ><input type="radio" name="q2" value="Pathfinder (Sojourner)" />
+                Pathfinder (Sojourner)</label
+              >
+            </fieldset>
+
+            <fieldset>
+              <legend>
+                3) What phenomenon is believed to cause the continuous loss of
+                Mars’ atmosphere into space?
+              </legend>
+              <label
+                ><input
+                  type="radio"
+                  name="q3"
+                  value="Internal gravitational pressure from the core"
+                />
+                Internal gravitational pressure from the core</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q3"
+                  value="Lack of a global magnetic field"
+                />
+                Lack of a global magnetic field</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q3"
+                  value="Permanent polar condensation"
+                />
+                Permanent polar condensation</label
+              >
+            </fieldset>
+
+            <button type="submit" class="btn">Submit answers</button>
+          </form>
+
+          <p id="trivia-result" class="trivia-result" aria-live="polite"></p>
+        </div>
+      </div>
     </div>
     <!-- <img
       src="https://ik.imagekit.io/aitoroa/UDIT/astronaut.png?updatedAt=1744720013164"
@@ -47,5 +136,6 @@
       class="astronauta"
     /> -->
     <script src="js/Countdown.js"></script>
+    <script src="js/MobileTrivia.js"></script>
   </body>
 </html>
