@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("trivia-form");
   const result = document.getElementById("trivia-result");
 
-  const isMobile = () => window.matchMedia("(max-width: 900px)").matches;
+  const isMobile = () => window.matchMedia("(max-width: 1000px)").matches;
 
   rebootBtn.addEventListener("click", (evt) => {
     if (isMobile()) {
@@ -58,6 +58,10 @@ document.addEventListener("DOMContentLoaded", () => {
       result.textContent =
         "Correct! You restored the system and recovered the route to Mars!";
       result.style.color = "#00ff7f";
+      setTimeout(() => {
+        window.location.href =
+          "https://adrian-cano-udit.github.io/404s-to-mars/";
+      }, 3000);
     } else {
       result.textContent = "You missed at least one question. Try again!";
       result.style.color = "#ff4b2b";
