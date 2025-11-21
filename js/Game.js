@@ -34,7 +34,7 @@ class Game {
     this.#player = new Player(370, 550, this.#eventDispatcher);
     this.#shots = [];
     this.#aliens = [];
-    for (let row = 0; row < 6; row++) {
+    for (let row = 0; row < 8; row++) {
       for (let column = 0; column < 12; column++) {
         this.#aliens.push(
           new Alien(100 + column * 50, 50 + row * 30, this.#eventDispatcher)

@@ -9,7 +9,7 @@ class Player extends Entity {
     super(x, y, 0, 0, 40, 25, "green");
     this.#velocity = 120;
     this.#eventDispatcher = eventDispatcher;
-    this.#shotDelay = 0.5;
+    this.#shotDelay = 0.3;
     this.#deltaTime = new DeltaTime();
   }
 

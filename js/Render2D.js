@@ -81,10 +81,17 @@ class Render2D {
 
     const scoreText = `SCORE: ${score}`;
     const livesText = `LIVES: ${lives}`;
+    const instructions = "SPACE to shoot | ARROWS to move";
 
     this.#ctx.fillText(scoreText, 10, 10);
     const livesWidth = this.#ctx.measureText(livesText).width;
     this.#ctx.fillText(livesText, this.#canvas.width - livesWidth - 10, 10);
+    const instructionsWidth = this.#ctx.measureText(instructions).width;
+    this.#ctx.fillText(
+      instructions,
+      (this.#canvas.width - instructionsWidth) / 2,
+      10
+    );
 
     this.#ctx.restore();
   }
