@@ -179,16 +179,6 @@ h1 {
     clip: rect(0, 9999px, 0, 0);
   }
 }
-.astronauta {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 60vh;
-  max-height: 100%;
-  z-index: 10;
-  pointer-events: none;
-  user-select: none;
-}
 
 #trivia-overlay {
   position: fixed;
@@ -232,13 +222,24 @@ h1 {
   margin: 0.75rem 0;
   padding: 0.5rem 0.75rem;
 }
+
 .trivia-modal legend {
   color: #ff416c;
+  margin-bottom: 0.5rem;
 }
+
 .trivia-modal label {
-  display: inline-block;
-  margin-right: 0.75rem;
-  margin-top: 0.35rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.trivia-modal input[type="radio"] {
+  width: 24px;
+  height: 24px;
+  accent-color: #ff416c;
+  margin-right: 0.85rem;
+  flex-shrink: 0;
 }
 
 .trivia-result {
@@ -276,7 +277,8 @@ h1 {
 @media (max-width: 600px) {
   body {
     padding: 2rem;
-    overflow: auto;
+    overflow: hidden;
+    height: 100svh;
   }
 
   .container {

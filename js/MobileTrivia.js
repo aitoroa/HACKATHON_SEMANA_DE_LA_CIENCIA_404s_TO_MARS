@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         window.location.href =
           "https://adrian-cano-udit.github.io/404s-to-mars/";
-      }, 3000);
+      }, 2000);
     } else {
       result.textContent = "You missed at least one question. Try again!";
       result.style.color = "#ff4b2b";

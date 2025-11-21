@@ -109,7 +109,7 @@ class Game {
 
   #winLogic() {
     if (this.#keyboard.is(Keyboard.Key.ENTER)) {
-      this.#reload();
+      window.location.href = "https://adrian-cano-udit.github.io/404s-to-mars/";
     }
   }
 
@@ -162,10 +162,6 @@ class Game {
           this.#aliens = this.#aliens.filter((alien) => alien.isAlive);
           if (this.#aliens.length === 0 && this.#player.isAlive) {
             this.#status = Game.Status.WIN;
-            setTimeout(() => {
-              window.location.href =
-                "https://adrian-cano-udit.github.io/404s-to-mars/";
-            }, 3000);
           }
           break;
         case EventDispatcher.Event.PLAYER_KILLED:
