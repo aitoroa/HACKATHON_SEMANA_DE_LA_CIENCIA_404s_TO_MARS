@@ -266,6 +266,13 @@ h1 {
   }
 }
 
+@media (max-width: 768px) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 @media (max-width: 600px) {
   body {
     padding: 2rem;
